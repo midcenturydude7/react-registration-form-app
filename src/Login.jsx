@@ -1,7 +1,7 @@
 import React from "react";
 import AuthContext from "./context/AuthProvider";
-import axios from "./api/axios";
 
+import axios from "./api/axios";
 const LOGIN_URL = "/auth";
 
 function Login() {
