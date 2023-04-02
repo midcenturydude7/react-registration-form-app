@@ -30,6 +30,8 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    e.preventDefault();
+
     try {
       const response = await axios.post(
         LOGIN_URL,
@@ -40,6 +42,7 @@ function Login() {
         }
       );
       console.log(JSON.stringify(response?.data));
+      //console.log(JSON.stringify(response));
       const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
       setAuth({ user, pwd, roles, accessToken });
@@ -62,7 +65,6 @@ function Login() {
 
   return (
     <section>
-      {" "}
       <p
         ref={errRef}
         className={errMsg ? "errmsg" : "offscreen"}
