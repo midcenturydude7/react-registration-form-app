@@ -1,13 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Users from "./Users";
+
 function Admin() {
+  const navigate = useNavigate();
+
+  function goBack() {
+    return navigate(-1);
+  }
   return (
     <section>
-      <h1>Admin</h1>
+      <h1>Admin Page</h1>
       <br />
-      <p>You must have been assigned an Admin role.</p>
+      <Users />
       <div className="flexGrow">
-        <Link to="/">Home</Link>
+        <button onClick={goBack}>Go back</button>
       </div>
     </section>
   );

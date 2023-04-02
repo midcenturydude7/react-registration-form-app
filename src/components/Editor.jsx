@@ -6,7 +6,7 @@ function Editor() {
     <section>
       <h1>Editor</h1>
       <br />
-      <p>You must be assigned to an Editor role</p>
+      <p>You must have been assigned to an Editor role</p>
       <div className="flexGrow">
         <Link to="/">Home</Link>
       </div>

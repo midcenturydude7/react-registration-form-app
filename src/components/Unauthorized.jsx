@@ -1,7 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Unauthorized() {
-  return <div>Unauthorized</div>;
+  const navigate = useNavigate();
+  function goBack() {
+    return navigate(-1);
+  }
+  return (
+    <section>
+      <h1>Unauthorized</h1>
+      <br />
+      <p>You do not have access to the requested page.</p>
+      <div className="flexGrow">
+        <button onClick={goBack}>Go Back</button>
+      </div>
+    </section>
+  );
 }
 
 export default Unauthorized;

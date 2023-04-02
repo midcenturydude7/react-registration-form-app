@@ -65,6 +65,7 @@ button {
 
 button {
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .instructions {
@@ -110,4 +111,11 @@ button {
 
 .line {
   display: inline-block;
+}
+
+.flexGrow {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
