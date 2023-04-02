@@ -6,7 +6,7 @@ import axios from "../api/axios";
 const LOGIN_URL = "/auth";
 
 function Login() {
-  const { setAuth } = useAuth;
+  const { setAuth } = useAuth();
 
   const navigate = useNavigate();
   const location = useLocation();
