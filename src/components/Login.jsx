@@ -73,7 +73,7 @@ function Login() {
       </p>
       <h1>Sign In</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Username:</label>
         <input
           type="text"
           id="username"
@@ -83,7 +83,8 @@ function Login() {
           value={user}
           required
         />
-        <label htmlFor="password">password</label>
+
+        <label htmlFor="password">Password:</label>
         <input
           type="password"
           id="password"
@@ -94,11 +95,10 @@ function Login() {
         <button>Sign In</button>
       </form>
       <p>
-        Need an account?
+        Need an Account?
         <br />
         <span className="line">
-          {/* put router link here */}
-          <Link to="/register">Sign up</Link>
+          <Link to="/register">Sign Up</Link>
         </span>
       </p>
     </section>
