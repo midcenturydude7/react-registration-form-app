@@ -3,7 +3,7 @@ import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import { useNavigate, useLocation } from "react-router-dom";
 
 function Users() {
-  const [users, setUsers] = useState();
+  const [users, setUsers] = React.useState();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
   const location = useLocation();
@@ -43,7 +43,7 @@ function Users() {
           ))}
         </ul>
       ) : (
-        <p>No users to dislay</p>
+        <p>No users to display</p>
       )}
     </article>
   );
