@@ -1,11 +1,10 @@
-import React from "react";
 import axios from "../api/axios";
 import useAuth from "./useAuth";
 
-function useRefreshToken() {
+const useRefreshToken = () => {
   const { setAuth } = useAuth();
 
-  async function refresh() {
+  const refresh = async () => {
     const response = await axios.get("/refresh", {
       withCredentials: true,
     });
@@ -15,8 +14,8 @@ function useRefreshToken() {
       return { ...prev, accessToken: response.data.accessToken };
     });
     return response.data.accessToken;
-  }
+  };
   return refresh;
-}
+};
 
 export default useRefreshToken;

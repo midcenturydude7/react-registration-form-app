@@ -1,18 +1,18 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function Users() {
-  const [users, setUsers] = React.useState();
+const Users = () => {
+  const [users, setUsers] = useState();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
   const location = useLocation();
 
-  React.useEffect(() => {
+  useEffect(() => {
     let isMounted = true;
     const controller = new AbortController();
 
-    async function getUsers() {
+    const getUsers = async () => {
       try {
         const response = await axiosPrivate.get("/users", {
           signal: controller.signal,
@@ -23,7 +23,7 @@ function Users() {
         console.error(err);
         navigate("/login", { state: { from: location }, replace: true });
       }
-    }
+    };
 
     getUsers();
 
@@ -47,6 +47,6 @@ function Users() {
       )}
     </article>
   );
-}
+};
 
 export default Users;
