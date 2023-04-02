@@ -19,8 +19,8 @@ function App() {
         {/* Public Routes */}
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="linkpage" elemet={<LinkPage />} />
-        <Route path="unauthorized" elemet={<Unauthorized />} />
+        <Route path="linkpage" element={<LinkPage />} />
+        <Route path="unauthorized" element={<Unauthorized />} />
 
         {/* Protected Routes */}
         <Route element={<RequireAuth />}>
