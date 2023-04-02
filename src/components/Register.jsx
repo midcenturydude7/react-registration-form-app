@@ -1,7 +1,7 @@
 import React from "react";
 
 // Axios
-import axios from "./api/axios";
+import axios from "../api/axios";
 
 // Font Awesome
 import {
