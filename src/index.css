@@ -68,6 +68,20 @@ button {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+  margin-left: 0.25em;
+}
+
+li {
+  margin-top: 0.35em;
+  text-decoration: underline;
+}
+
+li:last-child {
+  margin-bottom: 2em;
+}
+
 .instructions {
   font-size: 0.75rem;
   border-radius: 0.5rem;
@@ -111,6 +125,24 @@ button {
 
 .line {
   display: inline-block;
+}
+
+.persistCheck {
+  font-size: 0.75rem;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.persistCheck label {
+  margin: 0;
+}
+
+[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px 2px 2px;
 }
 
 .flexGrow {
